@@ -1,0 +1,18 @@
+<input type="text" ng-model="userList.search" class="search-query" id="projects_search" placeholder="Search">
+<table>
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+  </tr>
+  <tbody>
+  <tr ng-repeat="user in userList.users | filter:userList.search | orderBy:'lastname'">
+    <td>{{user.firstname}}</td>
+    <td>{{user.lastname}}</td>
+    <td>{{user.age}}</td>
+    <td>{{user.gender}}</td>
+  </tr>
+  </tbody>
+</table>
